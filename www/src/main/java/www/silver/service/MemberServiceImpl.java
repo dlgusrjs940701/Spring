@@ -19,5 +19,10 @@ public class MemberServiceImpl implements IF_MemberService{
 		// 실제 데이터를 저장하도록 지시한다...
 		memberdao.insertOne(membervo);
 	}
+	@Override
+	public MemberVO selectOne(String id) throws Exception {
+		// TODO Auto-generated method stub
+		return memberdao.selectOne(id);
+	}
 
 }

@@ -1,7 +1,5 @@
 package www.silver.util;
 
-
-
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -36,6 +34,7 @@ public class FileDataUtil {
 	@Resource(name="uploadPath")
 	private String uploadPath;
 	
+	
 	public String getUploadPath() {
 		return uploadPath;
 	}
@@ -67,7 +66,7 @@ public class FileDataUtil {
 				String originalName = file[i].getOriginalFilename();//확장자가져오기 위해서 전체파일명을 가져옴.
 				UUID uid = UUID.randomUUID();//랜덤문자 구하기 맘에안든다. 
 				String saveName = uid.toString() + "." + originalName.split("\\.")[1];//한글 파일명 처리 때문에...
-				// 
+				//                                            
 //			String[] files = new String[] {saveName}; //형변환  files[0] 파일명이 들어 간다..
 				byte[] fileData = file[i].getBytes();
 				
@@ -87,4 +86,3 @@ public class FileDataUtil {
 		this.extNameArray = extNameArray;
 	}
 }
-

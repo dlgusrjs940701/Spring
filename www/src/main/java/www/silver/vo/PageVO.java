@@ -1,16 +1,11 @@
 package www.silver.vo;
 
-public class PageVO {
-	// 페이지에 시작되는 글 번호
+public class Pagevo {
 	private int startNo;
-	// 페이지에 마지막 글 번호
 	private int endNo;
-	// 한페이지당 글의 갯수
 	private int perPageNum=10;
 	private Integer page; // Integer 웹에서 받은 페이지 정보(String)가 없으면 null인데 int는 null을 저장할 수 없다. 오류방지
-	// 전체 글 갯수
 	private int totalCount;
-	//
 	private int endPage;
 	private int startPage;
 	private boolean prev;

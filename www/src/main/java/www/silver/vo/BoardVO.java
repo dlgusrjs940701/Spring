@@ -8,7 +8,7 @@ public class BoardVO {
 	String pass;
 	String viewmember;
 	String indate;
-	String[] newFileName;
+	String[] filename;
 	String num;
 	
 	public String getNum() {
@@ -19,12 +19,12 @@ public class BoardVO {
 		this.num = num;
 	}
 
-	public String[] getNewFileName() {
-		return newFileName;
+	public String[] getFilename() {
+		return filename;
 	}
 
-	public void setNewFileName(String[] newFileName) {
-		this.newFileName = newFileName;
+	public void setFilename(String[] filename) {
+		this.filename = filename;
 	}
 
 	@Override

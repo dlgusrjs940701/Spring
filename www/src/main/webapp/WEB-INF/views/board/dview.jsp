@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -239,132 +239,7 @@ nav li.dropdown:hover>ul.dropdown-menu {
 </style>
 
 <body>
-	<div id="header">
-		<div class="header_10">
-			<h2>KimTeacher Lap</h2>
-			<h5>Programers</h5>
-		</div>
-		<div class="header_20">
-			<!--<form>
-                <input type="text" name="searchword" size="70">
-                <input type="submit" value="Search">
-            </form>-->
-		</div>
-		<div id="userinfo">
-			<div>
-				<p>
-					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-						fill="currentColor" class="bi bi-bug" viewBox="0 0 16 16">
-            <path
-							d="M4.355.522a.5.5 0 0 1 .623.333l.291.956A4.979 4.979 0 0 1 8 1c1.007 0 1.946.298 2.731.811l.29-.956a.5.5 0 1 1 .957.29l-.41 1.352A4.985 4.985 0 0 1 13 6h.5a.5.5 0 0 0 .5-.5V5a.5.5 0 0 1 1 0v.5A1.5 1.5 0 0 1 13.5 7H13v1h1.5a.5.5 0 0 1 0 1H13v1h.5a1.5 1.5 0 0 1 1.5 1.5v.5a.5.5 0 1 1-1 0v-.5a.5.5 0 0 0-.5-.5H13a5 5 0 0 1-10 0h-.5a.5.5 0 0 0-.5.5v.5a.5.5 0 1 1-1 0v-.5A1.5 1.5 0 0 1 2.5 10H3V9H1.5a.5.5 0 0 1 0-1H3V7h-.5A1.5 1.5 0 0 1 1 5.5V5a.5.5 0 0 1 1 0v.5a.5.5 0 0 0 .5.5H3c0-1.364.547-2.601 1.432-3.503l-.41-1.352a.5.5 0 0 1 .333-.623zM4 7v4a4 4 0 0 0 3.5 3.97V7H4zm4.5 0v7.97A4 4 0 0 0 12 11V7H8.5zM12 6a3.989 3.989 0 0 0-1.334-2.982A3.983 3.983 0 0 0 8 2a3.983 3.983 0 0 0-2.667 1.018A3.989 3.989 0 0 0 4 6h8z" />
-          </svg>
-					현재사용자 : Guest
-				</p>
-			</div>
-		</div>
-
-		<style>
-li {
-	color: white;
-}
-</style>
-	</div>
-	<div id="nav">
-		<nav class="navbar navbar-expand-lg "
-			style="background-color: #89bce6;">
-			<div class="container-fluid">
-				<a class="navbar-brand" href="#"></a>
-				<button class="navbar-toggler" type="button"
-					data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-					aria-controls="navbarSupportedContent" aria-expanded="false"
-					aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-						<li class="nav-item"><a class="nav-link active"
-							aria-current="page" href="#"> </a></li>
-						<li class="nav-item"><a class="nav-link" href="./index.html">Home</a>
-						</li>
-						<li class="nav-item"><a class="nav-link" href="#">Lecture</a>
-						</li>
-						<li class="nav-item dropdown"><a
-							class="nav-link dropdown-toggle" href="#" role="button"
-							data-bs-toggle="dropdown" aria-expanded="false"> Study </a>
-							<ul class="dropdown-menu">
-								<li><a class="dropdown-item" href="./java.html">java</a></li>
-								<li><a class="dropdown-item" href="#">Another action</a></li>
-								<li>
-									<hr class="dropdown-divider">
-								</li>
-								<li><a class="dropdown-item" href="#">Something else
-										here</a></li>
-							</ul></li>
-						<li class="nav-item"><a class="nav-link active"
-							aria-current="page" href="./bbs.html">게시판</a></li>
-						<li class="nav-item"><a class="nav-link active"
-							aria-current="page" href="#">뉴스</a></li>
-						<li class="nav-item"><a class="nav-link active"
-							aria-current="page" href="#">취업정보</a></li>
-					</ul>
-					<form class="d-flex" role="search">
-						<input class="form-control me-2" type="search"
-							placeholder="Search" aria-label="Search">
-						<button class="btn btn-outline-success" type="submit">Search</button>
-					</form>
-				</div>
-			</div>
-		</nav>
-
-		<!--      <ul>
-            <li><div class="dropdown">
-                <button id="btn01">Laps</button>
-                <div class="dropdown-options">
-                  <a href="#">Dashboard</a>
-                  <a href="#">Setting</a>
-                  <a href="#">Logout</a>
-                </div>
-              </div>
-            </li>
-            <li><div class="dropdown">
-                <button id="btn02">DataBase</button>
-                <div class="dropdown-options">
-                  <a href="#">Dashboar2d</a>
-                  <a href="#">Setting2</a>
-                  <a href="#">Logou2t</a>
-                </div>
-              </div>
-            </li>
-            <li><div class="dropdown">
-                <button id="btn03">FrontEnd</button>
-                <div class="dropdown-options">
-                  <a href="#">Dashboard</a>
-                  <a href="#">Setting</a>
-                  <a href="#">Logout</a>
-                </div>
-              </div>
-            </li>
-            <li><div class="dropdown">
-                <button id="btn04">BackEnd</button>
-                <div class="dropdown-options">
-                  <a href="#">Dashboard</a>
-                  <a href="#">Setting</a>
-                  <a href="#">Logout</a>
-                </div>
-              </div>
-            </li>
-            <li><div class="dropdown">
-                <button id="btn05">Lecture</button>
-                <div class="dropdown-options">
-                  <a href="#">Dashboard</a>
-                  <a href="#">Setting</a>
-                  <a href="#">Logouts</a>
-                </div>
-              </div>
-            </li>
-        </ul>
-    -->
-	</div>
+	<%@ include file="../include/top.jsp" %>
 	<div id="mainsection">
 		<style>
 #mainsection_left {
@@ -430,37 +305,54 @@ li {
 					</div>
 				</div>
 			</div>
+			<div>
+				<div class="card text-center">
+					<div class="card-body">
+					<style>
+						.bgc {
+							background-color: rgb(234, 230, 230);
+						}
+					</style>
+						<table width=100% height=600>
+							<tr height=40>
+								<td width=20% class="bgc">Type</td>
+								<td align=left>&nbsp;${boardvo.type }</td>
+							</tr>
+							<tr height=40>
+								<td class="bgc">작성자</td>
+								<td align=left> &nbsp;${boardvo.username}</td>
+							</tr>
+							<tr height=40>
+								<td class="bgc">제목</td>
+								<td align=left> &nbsp;${boardvo.title}</td>
+							</tr>
+							<tr height=40>
+								<td colspan=3 class="bgc">내용</td>
+							</tr>
+								<td colspan=3>${boardvo.content}</td>
+							</tr>
+							<tr height=40>
+								<td colspan=3 class="bgc">첨부파일</td>
+							</tr>
+								<td colspan=3>
+									<c:forEach items="${attachList }" var="fname">
+										<img src="download?filename=${fname }"><br>
+										<a href="download?filename=${fname }">[download]</a><br>										
+									</c:forEach>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
 
-			<form class="row g-3" action="bwrdo" method="post"
-				encType="multipart/form-data">
-				<div class="col-md-4">
-					<label for="inputState" class="form-label">놀이터 선택</label>
-					${boardvo.type }
-				</div>
-				<div class="col-md-3">
-					<label for="inputCity" class="form-label">작성자</label>
-					${boardvo.username }
-				</div>
-				<div class="col-md-3"></div>
-				<div class="col-12">
-					<label for="inputAddress" class="form-label">제목</label>
-					${boardvo.title}
-				</div>
 
 
-				<div class="form-floating">${boardvo.content }</div>
-				<div class="mb-3"></div>
 
-				<c:forEach items="${attachList }" var="filename">
-					<a href="downliad?filename=${filename }">filename</a>
-				</c:forEach>
-				<div class="col-12">
-					<div class="form-check"></div>
-				</div>
-				<div class="col-12">
-					<button type="button" class="btn btn-primary">확인</button>
-					<!--  submit 타입은 form action으로 지정된 곳으로 이동 -->
-				</div>
+			<div class="col-12">
+				<button type="button" class="btn btn-primary">확인</button>
+
+			</div>
 			</form>
 		</div>
 
@@ -509,85 +401,7 @@ li {
 		</div>
 		<div></div>
 	</div>
-	<div id="footer">
-		<hr>
-		김티처 tel. 010-9407-8767
-	</div>
-	<!-- Modal -->
-	<div class="modal fade" id="exampleModal" tabindex="-1"
-		aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h1 class="modal-title fs-5" id="exampleModalLabel">회원가입</h1>
-					<button type="button" class="btn-close" data-bs-dismiss="modal"
-						aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-					<div class="input-group mb-3">
-						<span class="input-group-text" id="basic-addon1">ID</span> <input
-							type="text" class="form-control" placeholder="Username"
-							aria-label="Username" aria-describedby="basic-addon1">
-					</div>
-					<div class="input-group mb-3">
-						<span class="input-group-text" id="basic-addon1">PASS</span> <input
-							type="text" class="form-control" placeholder="Pass"
-							aria-label="Username" aria-describedby="basic-addon1">
-					</div>
-					<div class="input-group mb-3">
-						<span class="input-group-text" id="basic-addon1">TEL</span> <input
-							type="text" class="form-control" placeholder="tel"
-							aria-label="Username" aria-describedby="basic-addon1">
-					</div>
-					<div class="input-group mb-3">
-						<span class="input-group-text" id="basic-addon1">EMAIL</span> <input
-							type="text" class="form-control" placeholder="E-mail"
-							aria-label="Username" aria-describedby="basic-addon1">
-					</div>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary"
-						data-bs-dismiss="modal">Save</button>
-					<button type="button" class="btn btn-primary"
-						data-bs-dismiss="modal">Cancel</button>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div>
-		<!-- Modal -->
-		<!-- Modal -->
-		<div class="modal fade" id="loginModal" tabindex="-1"
-			aria-labelledby="exampleModalLabel1" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h1 class="modal-title fs-5" id="exampleModalLabel1">로그인</h1>
-						<button type="button" class="btn-close" data-bs-dismiss="modal"
-							aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<div class="input-group mb-3">
-							<span class="input-group-text" id="basic-addon1">ID</span> <input
-								type="text" class="form-control" placeholder="Username"
-								aria-label="Username" aria-describedby="basic-addon1">
-						</div>
-						<div class="input-group mb-3">
-							<span class="input-group-text" id="basic-addon1">PASS</span> <input
-								type="text" class="form-control" placeholder="Pass"
-								aria-label="Username" aria-describedby="basic-addon1">
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-secondary"
-								data-bs-dismiss="modal">login</button>
-							<button type="button" class="btn btn-primary "
-								data-bs-dismiss="modal">Cancel</button>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div>
-				<!-- Modal -->
+	<%@ include file="../include/tailModal.jsp" %>
 </body>
 
 </html>

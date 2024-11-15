@@ -1,5 +1,6 @@
 package www.silver.dao;
 
+import java.util.HashMap;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -8,7 +9,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
 import www.silver.vo.BoardVO;
-import www.silver.vo.PageVO;
+import www.silver.vo.Pagevo;
 
 @Repository
 public class BoardDaoImpl implements IF_BoardDao{
@@ -20,14 +21,15 @@ public class BoardDaoImpl implements IF_BoardDao{
 	public void insertBoard(BoardVO boardvo) throws Exception {
 		// TODO Auto-generated method stub
 		//sqlsession을 통해서 mapper와 매핑해야 하기에 정보를 넘겨준다.
+		System.out.println("insert board");
 		sqlsession.insert(mapperQuery+".inin", boardvo);
 	
 	}
 
 	@Override
-	public List<BoardVO> selectAll(PageVO pagevo) throws Exception {
+	public List<BoardVO> selectAll(Pagevo pagevo) throws Exception {
 		// TODO Auto-generated method stub
-		return sqlsession.selectList(mapperQuery+".selectall", pagevo);
+		return sqlsession.selectList(mapperQuery+".selectall",pagevo);
 	}
 
 	@Override
@@ -36,17 +38,19 @@ public class BoardDaoImpl implements IF_BoardDao{
 		sqlsession.delete(mapperQuery+".delone", delno);
 	}
 
-	
-
 	@Override
 	public BoardVO selectOne(String title) throws Exception {
 		// TODO Auto-generated method stub
+//		HashMap aa = new HashMap<String, String>();
+//		aa.put("tt", title);
+//		aa.put("dd", date);
 		return sqlsession.selectOne(mapperQuery+".selectTitle", title);
 	}
 
 	@Override
 	public void updateBoard(BoardVO boardvo) throws Exception {
 		// TODO Auto-generated method stub
+		System.out.println(boardvo.getNum());
 		sqlsession.update(mapperQuery+".update", boardvo);
 	}
 
@@ -57,9 +61,10 @@ public class BoardDaoImpl implements IF_BoardDao{
 	}
 
 	@Override
-	public void insertAttach(String filename) throws Exception {
+	public void insertAttach(String fname) throws Exception {
 		// TODO Auto-generated method stub
-		sqlsession.insert(mapperQuery+".insertattach", filename);
+		System.out.println("attach insert");
+		sqlsession.insert(mapperQuery+".insertattach", fname);
 	}
 
 	@Override
@@ -67,5 +72,7 @@ public class BoardDaoImpl implements IF_BoardDao{
 		// TODO Auto-generated method stub
 		return sqlsession.selectList(mapperQuery+".selectattach", no);
 	}
+
+	
 
 }

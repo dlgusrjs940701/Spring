@@ -22,5 +22,10 @@ public class MemberDaoImpl implements IF_MemberDao {
 		sqlSession.insert(mapperQuery+".insertOne",membervo);
 		//   www.silver.dao.IF_MemberDao.insertOne  << 매핑의정보
 	}
+	@Override
+	public MemberVO selectOne(String id) throws Exception {
+		// TODO Auto-generated method stub
+		return sqlSession.selectOne(mapperQuery+".selectOne", id);
+	}
 
 }

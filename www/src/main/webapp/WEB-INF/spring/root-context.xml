@@ -15,11 +15,14 @@
 	<bean
 	class="org.springframework.jdbc.datasource.DriverManagerDataSource"
 	id="dataSource">  <!--  한 개가 빈설정.. 객체 설정.. 객체만들어 달라고 하는 것.. -->
-		<property name="driverClassName"  
-		value ="oracle.jdbc.driver.OracleDriver"> <!-- 객체의 변수 -->				
-		</property>
-		<property name="url" value="jdbc:oracle:thin:@localhost:1521:orcl"/>
-		<property name="username" value="gusrjs"></property>
+		<!--<property name="driverClassName"  
+		value ="oracle.jdbc.driver.OracleDriver" />  객체의 변수 -->	
+		<property name="driverClassName"
+			value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy" />
+		<property name="url"
+			value="jdbc:log4jdbc:oracle:thin:@localhost:1521:orcl" />
+	<!--  <property name="url" value="jdbc:oracle:thin:@localhost:1521:orcl"/>-->	
+		<property name="username" value="system"></property>
 		<property name="password" value="11111111"></property>	
 	</bean>
 	

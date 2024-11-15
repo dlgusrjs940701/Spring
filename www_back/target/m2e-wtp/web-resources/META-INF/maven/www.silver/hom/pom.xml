@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>www.silver</groupId>
@@ -11,7 +10,7 @@
 	<properties>
 		<java-version>1.8</java-version>
 		<org.springframework-version>4.3.22.RELEASE</org.springframework-version>
-		<org.aspectj-version>1.6.10</org.aspectj-version>
+		<org.aspectj-version>1.8.9</org.aspectj-version>
 		<org.slf4j-version>1.6.6</org.slf4j-version>
 	</properties>
 	<dependencies>
@@ -25,7 +24,7 @@
 				<exclusion>
 					<groupId>commons-logging</groupId>
 					<artifactId>commons-logging</artifactId>
-				</exclusion>
+				 </exclusion>
 			</exclusions>
 		</dependency>
 		<dependency>
@@ -33,14 +32,14 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
-
+				
 		<!-- AspectJ -->
 		<dependency>
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjrt</artifactId>
 			<version>${org.aspectj-version}</version>
-		</dependency>
-
+		</dependency>	
+		
 		<!-- Logging -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -90,7 +89,7 @@
 			<artifactId>javax.inject</artifactId>
 			<version>1</version>
 		</dependency>
-
+				
 		<!-- Servlet -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -109,27 +108,28 @@
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
-
+	
 		<!-- Test -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.7</version>
 			<scope>test</scope>
-		</dependency>
-		<!-- dependency는 필요한 라이브러리를 설정한다. 여기다가 설정하면 Maven 원격 리포지터리에서 라이브러리를 다운받아서 
-			프로젝트에 빌드해준다. -->
-
-		<!-- Mybatis 작업에서 필요한 라이브러리를 설정 -->
-		<!-- 추가할 라이브러리를 설정합니다. -->
+		</dependency>  
+		<!--  dependency는 필요한 라이브러리를 설정한다.
+		      여기다가 설정하면  Maven 원격 리포지토리에서 라이브러리를 다운받아서
+		      프로젝트에 빌드해 준다. -->
+		<!--  Mybatis 작업에서 필요한 라이브러리를 설정 -->
+		
+		<!--  추가할 라이브러리를 설정합니다. -->
 		<!-- https://mvnrepository.com/artifact/com.oracle.database.jdbc/ojdbc8 -->
 		<dependency>
-			<groupId>com.oracle.database.jdbc</groupId>
-			<artifactId>ojdbc8</artifactId>
-			<version>12.2.0.1</version>
-		</dependency>
-
-		<!-- mybatis 라이브러리 -->
+    		<groupId>com.oracle.database.jdbc</groupId>
+    		<artifactId>ojdbc8</artifactId>
+    		<version>12.2.0.1</version>
+		</dependency>    
+		
+		<!--  mybatis 라이브러리 -->
 		<!-- MyBatis 연동 라이브러리 -->
 		<dependency>
 			<groupId>org.mybatis</groupId>
@@ -137,7 +137,7 @@
 			<version>3.2.8</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
+<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
 		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis-spring</artifactId>
@@ -148,44 +148,52 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
 			<version>${org.springframework-version}</version>
+		</dependency>	
+	
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.3.1</version>
 		</dependency>
+	
+	    
 	</dependencies>
-	<build>
-		<plugins>
-			<plugin>
-				<artifactId>maven-eclipse-plugin</artifactId>
-				<version>2.9</version>
-				<configuration>
-					<additionalProjectnatures>
-						<projectnature>org.springframework.ide.eclipse.core.springnature</projectnature>
-					</additionalProjectnatures>
-					<additionalBuildcommands>
-						<buildcommand>org.springframework.ide.eclipse.core.springbuilder</buildcommand>
-					</additionalBuildcommands>
-					<downloadSources>true</downloadSources>
-					<downloadJavadocs>true</downloadJavadocs>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.5.1</version>
-				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
-					<compilerArgument>-Xlint:all</compilerArgument>
-					<showWarnings>true</showWarnings>
-					<showDeprecation>true</showDeprecation>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>exec-maven-plugin</artifactId>
-				<version>1.2.1</version>
-				<configuration>
-					<mainClass>org.test.int1.Main</mainClass>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-eclipse-plugin</artifactId>
+                <version>2.9</version>
+                <configuration>
+                    <additionalProjectnatures>
+                        <projectnature>org.springframework.ide.eclipse.core.springnature</projectnature>
+                    </additionalProjectnatures>
+                    <additionalBuildcommands>
+                        <buildcommand>org.springframework.ide.eclipse.core.springbuilder</buildcommand>
+                    </additionalBuildcommands>
+                    <downloadSources>true</downloadSources>
+                    <downloadJavadocs>true</downloadJavadocs>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.5.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <compilerArgument>-Xlint:all</compilerArgument>
+                    <showWarnings>true</showWarnings>
+                    <showDeprecation>true</showDeprecation>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.2.1</version>
+                <configuration>
+                    <mainClass>org.test.int1.Main</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

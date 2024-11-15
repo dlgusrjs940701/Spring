@@ -6,6 +6,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<!--  parameterType은 쿼리문의 ?부분의 정보 -->
 	<insert id="insertOne" parameterType="www.silver.vo.MemberVO">
 		insert into kmember values (#{id},#{pass},#{tel},#{email})
-	</insert>		
+	</insert>	
+	<select id="selectOne" resultType="www.silver.vo.MemberVO">
+		select * from kmember where id=#{id}
+	</select>	
 </mapper>
 

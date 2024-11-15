@@ -25,12 +25,21 @@ public class HomeController {
 	 * Simply selects the home view to render by returning its name.
 	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Locale locale, Model model) {
+	public String home(Locale locale, Model model, @RequestParam(required = false, defaultValue = "no") String msg) {
+//		System.out.println(msg);
 		logger.info("Welcome home! The client locale is {}.", locale);
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		String formattedDate = dateFormat.format(date);
-		model.addAttribute("serverTime", formattedDate );
+//		Date date = new Date();
+//		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+//		String formattedDate = dateFormat.format(date);
+//		model.addAttribute("serverTime", formattedDate );
+		if(msg.equals("1")) {
+			msg="회원 전용입니다.";
+		}else if(msg.equals("2")) {
+			msg="로그인 실패";
+		}else if(msg.equals("3")) {
+			msg="가입완료 환영합니다.";
+		}
+		model.addAttribute("msg", msg);
 		return "home";
 	}
 	

@@ -24,7 +24,7 @@ public class MemberController {
 		//비지니스 로직을 서비스 단에게 요청..
 		memberservice.join(membervo);
 		
-		return "home";
+		return "redirect:/?msg=3";
 	}
 	
 }

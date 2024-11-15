@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import www.silver.dao.IF_BoardDao;
 import www.silver.vo.BoardVO;
-import www.silver.vo.PageVO;
+import www.silver.vo.Pagevo;
 
 @Service
 public class BoardServiceImpl implements IF_BoardService {
@@ -23,30 +23,31 @@ public class BoardServiceImpl implements IF_BoardService {
 				boardvo.setViewmember("공개");
 			}
 		} else {
-
 			boardvo.setViewmember("비공개");
 		}
-		// 게시글을 kboard에 저장해라
+		// 게시글을 kboard에 저장해라.
 		boarddao.insertBoard(boardvo);
-		// 첨부파일이 있다는 뜻
-		// 첨부파일이 있다면 첨부파일을 별도로 저장해라
-		String[] fname = boardvo.getNewFileName();
+		// 만약, 첨부파일이 있다면 첨부파일을 kboard_attach로 저장해라..
+		String[] fname = boardvo.getFilename();
+		//System.out.println(fname.length);
 		for (int i = 0; i < fname.length; i++) {
-			// kboard_attach에 저장하는 코드
-			if (fname[i] != null) {
-
+			// kboard_attach 테이블에 저장하는 코드
+			if (fname[i] != null)
 				boarddao.insertAttach(fname[i]);
-			}
 		}
+
+		// dao > mapper > DB insert
 	}
 
-	// dao > mapper > DB insert
-	
-
 	@Override
-	public List<BoardVO> boardList(PageVO pagevo) throws Exception {
-		// 처리하다가 DB작업이 필요
-		return boarddao.selectAll(pagevo);
+	public List<BoardVO> boardList(Pagevo pagevo) throws Exception {
+		// 처리하다가 DB작업이 필요..
+		List<BoardVO> list = boarddao.selectAll(pagevo);
+		for (BoardVO b : list) {
+			String date = b.getIndate();
+			b.setIndate(date.substring(0, 10));
+		}
+		return list;
 	}
 
 	@Override
@@ -64,6 +65,13 @@ public class BoardServiceImpl implements IF_BoardService {
 	@Override
 	public void modBoard(BoardVO boardvo) throws Exception {
 		// TODO Auto-generated method stub
+		if (boardvo.getViewmember() != null) {
+			if (boardvo.getViewmember().equals("1")) {
+				boardvo.setViewmember("공개");
+			}
+		} else {
+			boardvo.setViewmember("비공개");
+		}
 		boarddao.updateBoard(boardvo);
 	}
 
@@ -71,12 +79,6 @@ public class BoardServiceImpl implements IF_BoardService {
 	public int totalCountBoard() throws Exception {
 		// TODO Auto-generated method stub
 		return boarddao.cntBoard();
-	}
-
-	@Override
-	public void insertAttach(String filename) throws Exception {
-		// TODO Auto-generated method stub
-		boarddao.insertAttach(filename);
 	}
 
 	@Override
@@ -88,7 +90,7 @@ public class BoardServiceImpl implements IF_BoardService {
 	@Override
 	public List<String> getAttach(String no) throws Exception {
 		// TODO Auto-generated method stub
-		return null;
+		return boarddao.selectAllAttach(no);
 	}
 
 }
