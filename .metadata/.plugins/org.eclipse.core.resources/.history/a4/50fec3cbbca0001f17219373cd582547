@@ -1,0 +1,8 @@
+package www.silver.hom;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class BoardController {
+
+}

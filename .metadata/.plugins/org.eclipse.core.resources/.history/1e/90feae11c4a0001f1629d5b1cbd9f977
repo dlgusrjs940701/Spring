@@ -1,0 +1,28 @@
+package www.silver.hom;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class BoardController {
+
+	@GetMapping(value = "board")
+	public String board(Model model) throws Exception {
+		// Controller > service > dao > mapper
+		// 서비스 layer에 전체글 서비스를 요청하고 결과를 리턴
+//		List<BoardVO> list = boardservice.boardList();
+		// 단위 테스트
+//		System.out.println(list.size() + "건 가져옴");
+//		// 리턴받은 list 변수의 값을 모델 객체로 뷰에게 전송하는 코드
+//		model.addAttribute("list", list);
+		// 뷰를 지정하는 코드
+		return "board/board";
+	}
+	
+	@GetMapping(value="boardwrite")
+	public String boardwrite() throws Exception {
+		
+		return "board/boardwrite";
+	}
+}

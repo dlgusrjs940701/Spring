@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Spring]]></title><description><![CDATA[Level up your Java code and explore what Spring can do for you.]]></description><link>https://spring.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 14 Nov 2024 00:32:33 GMT</lastBuildDate><item><title><![CDATA[This Week in Spring - November 12th, 2024]]></title><link>https://spring.io/blog/2024/11/12/this-week-in-spring-november-12th-2024</link><guid isPermaLink="true">https://spring.io/blog/2024/11/12/this-week-in-spring-november-12th-2024</guid><dc:creator><![CDATA[joshlong]]></dc:creator><pubDate>Tue, 12 Nov 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Hi, Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://spring.io/blog/2024/11/08/spring-cloud-2024-0-0-rc1-aka-moorgate-has-been-released&quot;&gt;Spring Cloud 2024.0.0-RC1 (aka Moorgate) has been released&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;In this installment of &lt;em&gt;A Bootiful Podcast&lt;/em&gt;, &lt;a href=&quot;https://spring.io/blog/2024/11/07/a-bootiful-podcast-baruch-sadogursky&quot;&gt;I talk to Gradle developer advocate Baruch Sadogursky&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;good news everybody! &lt;a href=&quot;https://x.com/fniephaus/status/1856290749769281810&quot;&gt;GraalVM will now support &lt;code&gt;jcmd&lt;/code&gt;&lt;/a&gt;,  which allows you to bring diagnostics and monitoring of native images even closer to the Hotspot experience. JFR, heap dumps, thread dumps, JMX, and NMT are already available!&lt;/li&gt;
+&lt;li&gt;Modern Java is &lt;a href=&quot;https://gist.githubusercontent.com/joshlong/fcca98b7bbe0a09bd9927d138e970feb/raw/22df0a404fd836f1e21d7e1e5c65a3a0e0f46a58/DemoApplication.java&quot;&gt;&lt;em&gt;amazing&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;I&apos;ll be speaking at VOXXED Days Amsterdam next year. &lt;a href=&quot;https://x.com/VoxxedAmsterdam/status/1856297547523874961&quot;&gt;Will you be there?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;this French language post on how to &lt;a href=&quot;https://javaetmoi.com/2024/11/integrer-un-chatbot-dans-une-webapp-java-avec-langchain4j/&quot;&gt;integrate Langchain4J with Spring is pretty amazing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;the latest Pkl release &lt;a href=&quot;https://x.com/_JamesWard/status/1854998612431737033&quot;&gt;supports Spring Boot 3!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;three ways to    &lt;a href=&quot;https://blogs.vmware.com/tanzu/faking-oauth2-single-sign-on-in-spring-3-ways/&quot;&gt;fake OAuth 2 single sign on in a Spring application&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Data legend Gwen Shapira has a nice video on how to &lt;a href=&quot;https://www.youtube.com/watch?v=psxR23HOGbI&quot;&gt;get started with &lt;code&gt;pgvector&lt;/code&gt;, the module for vector stores in PostgreSQL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/spring-projects/spring-ai/pull/1666&quot;&gt;Spring AI has natiuve support for Kotlin! Nice!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://openjdk.org/jeps/483&quot;&gt;JEP 483, landing in Java 24, introduces AOT class loading and linking&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;also coming in Java 24: &lt;a href=&quot;https://openjdk.org/jeps/491&quot;&gt;synchronize virtual threads without pinning&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Spring Cloud 2024.0.0-RC1 (aka Moorgate) Has Been Released]]></title><link>https://spring.io/blog/2024/11/08/spring-cloud-2024-0-0-rc1-aka-moorgate-has-been-released</link><guid isPermaLink="true">https://spring.io/blog/2024/11/08/spring-cloud-2024-0-0-rc1-aka-moorgate-has-been-released</guid><dc:creator><![CDATA[OlgaMaciaszek]]></dc:creator><pubDate>Fri, 08 Nov 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;On behalf of the community, I am pleased to announce that the Release Candidate 1 (RC1) of the &lt;a href=&quot;https://cloud.spring.io&quot;&gt;Spring Cloud 2024.0.0&lt;/a&gt; Release Train is available today. The release can be found in &lt;a href=&quot;https://repo.spring.io/milestone/&quot;&gt;Spring Milestone&lt;/a&gt; repository. You can check out the 2024.0.0-RC1 &lt;a href=&quot;https://github.com/spring-cloud/spring-cloud-release/wiki/Spring-Cloud-2024.0-Release-Notes&quot;&gt;release notes for more information&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;notable-changes-in-the-202400-rc1-release-train&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#notable-changes-in-the-202400-rc1-release-train&quot; aria-label=&quot;notable changes in the 202400 rc1 release train permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Notable Changes in the 2024.0.0-RC1 Release Train&lt;/h2&gt;
+&lt;p&gt;This release of Spring Cloud is based on Spring Boot 3.4.0-RC1.&lt;/p&gt;
+&lt;p&gt;The GitHub project for this release can be found &lt;a href=&quot;https://github.com/orgs/spring-cloud/projects/155&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;spring-cloud-gateway&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#spring-cloud-gateway&quot; aria-label=&quot;spring cloud gateway permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Spring Cloud Gateway&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Implement ModifyResponseBody in MVC Server (&lt;a href=&quot;https://github.com/spring-cloud/spring-cloud-gateway/issues/3189&quot;&gt;#3189&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use new Spring Boot http client autoconfiguration framework (&lt;a href=&quot;https://github.com/spring-cloud/spring-cloud-gateway/issues/3571&quot;&gt;#3571&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;spring-cloud-netflix&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#spring-cloud-netflix&quot; aria-label=&quot;spring cloud netflix permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Spring Cloud Netflix&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add &lt;code&gt;RestClient&lt;/code&gt; support and make it the default &lt;code&gt;HTTP&lt;/code&gt; client used by SC Netflix Eureka (&lt;a href=&quot;https://github.com/spring-cloud/spring-cloud-netflix/issues/4257&quot;&gt;#4257&lt;/a&gt;, &lt;a href=&quot;https://github.com/spring-cloud/spring-cloud-netflix/pull/4363&quot;&gt;#4363&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;spring-cloud-commons&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#spring-cloud-commons&quot; aria-label=&quot;spring cloud commons permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Spring Cloud Commons&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add support for load-balanced &lt;code&gt;RestTemplateBuilder&lt;/code&gt; (&lt;a href=&quot;https://github.com/spring-cloud/spring-cloud-commons/issues/1402&quot;&gt;#1402&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;spring-cloud-config&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#spring-cloud-config&quot; aria-label=&quot;spring cloud config permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Spring Cloud Config&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Let The Config Server Handle Multiple Labels Instead Of The Client (&lt;a href=&quot;https://github.com/spring-cloud/spring-cloud-config/issues/2583&quot;&gt;#2583&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;spring-cloud-bus&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#spring-cloud-bus&quot; aria-label=&quot;spring cloud bus permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Spring Cloud Bus&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add a shutdown event, endpoint, and listener (&lt;a href=&quot;https://github.com/spring-cloud/spring-cloud-bus/pull/277&quot;&gt;#277&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The following modules were updated as part of 2024.0.0-RC1:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Module&lt;/th&gt;
+&lt;th&gt;Version&lt;/th&gt;
+&lt;th&gt;Issues&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Spring Cloud Bus&lt;/td&gt;
+&lt;td&gt;4.2.0-RC1&lt;/td&gt;
+&lt;td&gt;(&lt;a href=&quot;https://github.com/spring-cloud/spring-cloud-bus/releases/tag/v4.2.0-RC1&quot;&gt;issues&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spring Cloud Contract&lt;/td&gt;
+&lt;td&gt;4.2.0-M2&lt;/td&gt;
+&lt;td&gt;(&lt;a href=&quot;https://github.com/spring-cloud/spring-cloud-contract/releases/tag/v4.2.0-M2&quot;&gt;issues&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spring Cloud CircuitBreaker&lt;/td&gt;
+&lt;td&gt;3.2.0-M2&lt;/td&gt;
+&lt;td&gt;(&lt;a href=&quot;https://github.com/spring-cloud/spring-cloud-circuitbreaker/releases/tag/v3.2.0-M2&quot;&gt;issues&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spring Cloud Zookeeper&lt;/td&gt;
+&lt;td&gt;4.2.0-M2&lt;/td&gt;
+&lt;td&gt;(&lt;a href=&quot;https://github.com/spring-cloud/spring-cloud-zookeeper/releases/tag/v4.2.0-M2&quot;&gt;issues&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spring Cloud Task&lt;/td&gt;
+&lt;td&gt;3.2.0-RC1&lt;/td&gt;
+&lt;td&gt;(&lt;a href=&quot;https://github.com/spring-cloud/spring-cloud-task/releases/tag/v3.2.0-RC1&quot;&gt;issues&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spring Cloud Kubernetes&lt;/td&gt;
+&lt;td&gt;3.2.0-RC1&lt;/td&gt;
+&lt;td&gt;(&lt;a href=&quot;https://github.com/spring-cloud/spring-cloud-kubernetes/releases/tag/v3.2.0-RC1&quot;&gt;issues&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spring Cloud Starter Build&lt;/td&gt;
+&lt;td&gt;2024.0.0-RC1&lt;/td&gt;
+&lt;td&gt;(&lt;a href=&quot;https://github.com/spring-cloud/spring-cloud-starter-build/releases/tag/v2024.0.0-RC1&quot;&gt;issues&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spring Cloud Netflix&lt;/td&gt;
+&lt;td&gt;4.2.0-RC1&lt;/td&gt;
+&lt;td&gt;(&lt;a href=&quot;https://github.com/spring-cloud/spring-cloud-netflix/releases/tag/v4.2.0-RC1&quot;&gt;issues&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spring Cloud OpenFeign&lt;/td&gt;
+&lt;td&gt;4.2.0-RC1&lt;/td&gt;
+&lt;td&gt;(&lt;a href=&quot;https://github.com/spring-cloud/spring-cloud-openfeign/releases/tag/v4.2.0-RC1&quot;&gt;issues&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spring Cloud Commons&lt;/td&gt;
+&lt;td&gt;4.2.0-RC1&lt;/td&gt;
+&lt;td&gt;(&lt;a href=&quot;https://github.com/spring-cloud/spring-cloud-commons/releases/tag/v4.2.0-RC1&quot;&gt;issues&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spring Cloud Consul&lt;/td&gt;
+&lt;td&gt;4.2.0-RC1&lt;/td&gt;
+&lt;td&gt;(&lt;a href=&quot;https://github.com/spring-cloud/spring-cloud-consul/releases/tag/v4.2.0-RC1&quot;&gt;issues&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spring Cloud Config&lt;/td&gt;
+&lt;td&gt;4.2.0-RC1&lt;/td&gt;
+&lt;td&gt;(&lt;a href=&quot;https://github.com/spring-cloud/spring-cloud-config/releases/tag/v4.2.0-RC1&quot;&gt;issues&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spring Cloud Vault&lt;/td&gt;
+&lt;td&gt;4.2.0-RC1&lt;/td&gt;
+&lt;td&gt;(&lt;a href=&quot;https://github.com/spring-cloud/spring-cloud-vault/releases/tag/v4.2.0-RC1&quot;&gt;issues&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spring Cloud Build&lt;/td&gt;
+&lt;td&gt;4.2.0-RC1&lt;/td&gt;
+&lt;td&gt;(&lt;a href=&quot;https://github.com/spring-cloud/spring-cloud-build/releases/tag/v4.2.0-RC1&quot;&gt;issues&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spring Cloud Gateway&lt;/td&gt;
+&lt;td&gt;4.2.0-RC1&lt;/td&gt;
+&lt;td&gt;(&lt;a href=&quot;https://github.com/spring-cloud/spring-cloud-gateway/releases/tag/v4.2.0-RC1&quot;&gt;issues&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spring Cloud Stream&lt;/td&gt;
+&lt;td&gt;4.2.0-RC1&lt;/td&gt;
+&lt;td&gt;(&lt;a href=&quot;https://github.com/spring-cloud/spring-cloud-stream/releases/tag/v4.2.0-RC1&quot;&gt;issues&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spring Cloud Function&lt;/td&gt;
+&lt;td&gt;4.2.0-RC1&lt;/td&gt;
+&lt;td&gt;(&lt;a href=&quot;https://github.com/spring-cloud/spring-cloud-function/releases/tag/v4.2.0-RC1&quot;&gt;issues&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;As always, we welcome feedback on &lt;a href=&quot;https://github.com/spring-cloud/&quot;&gt;GitHub&lt;/a&gt;, on &lt;a href=&quot;https://gitter.im/spring-cloud/spring-cloud&quot;&gt;Gitter&lt;/a&gt;, on &lt;a href=&quot;https://stackoverflow.com/questions/tagged/spring-cloud&quot;&gt;Stack Overflow&lt;/a&gt;, or on &lt;a href=&quot;https://twitter.com/SpringCloud&quot;&gt;Twitter&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To get started with Maven with a BOM (dependency management only):&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-xml&quot;&gt;    &amp;#x3C;repositories&gt;
+        &amp;#x3C;repository&gt;
+            &amp;#x3C;id&gt;spring-milestones&amp;#x3C;/id&gt;
+            &amp;#x3C;name&gt;Spring Milestones&amp;#x3C;/name&gt;
+            &amp;#x3C;url&gt;https://repo.spring.io/milestone&amp;#x3C;/url&gt;
+            &amp;#x3C;snapshots&gt;
+                &amp;#x3C;enabled&gt;false&amp;#x3C;/enabled&gt;
+            &amp;#x3C;/snapshots&gt;
+        &amp;#x3C;/repository&gt;
+    &amp;#x3C;/repositories&gt;
+&amp;#x3C;dependencyManagement&gt;
+    &amp;#x3C;dependencies&gt;
+        &amp;#x3C;dependency&gt;
+            &amp;#x3C;groupId&gt;org.springframework.cloud&amp;#x3C;/groupId&gt;
+            &amp;#x3C;artifactId&gt;spring-cloud-dependencies&amp;#x3C;/artifactId&gt;
+            &amp;#x3C;version&gt;2024.0.0-RC1&amp;#x3C;/version&gt;
+            &amp;#x3C;type&gt;pom&amp;#x3C;/type&gt;
+            &amp;#x3C;scope&gt;import&amp;#x3C;/scope&gt;
+        &amp;#x3C;/dependency&gt;
+    &amp;#x3C;/dependencies&gt;
+&amp;#x3C;/dependencyManagement&gt;
+&amp;#x3C;dependencies&gt;
+    &amp;#x3C;dependency&gt;
+        &amp;#x3C;groupId&gt;org.springframework.cloud&amp;#x3C;/groupId&gt;
+        &amp;#x3C;artifactId&gt;spring-cloud-starter-config&amp;#x3C;/artifactId&gt;
+    &amp;#x3C;/dependency&gt;
+    &amp;#x3C;dependency&gt;
+        &amp;#x3C;groupId&gt;org.springframework.cloud&amp;#x3C;/groupId&gt;
+        &amp;#x3C;artifactId&gt;spring-cloud-starter-netflix-eureka-client&amp;#x3C;/artifactId&gt;
+    &amp;#x3C;/dependency&gt;
+    ...
+&amp;#x3C;/dependencies&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;or with Gradle:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-groovy&quot;&gt;plugins {
+  id &apos;java&apos;
+  id &apos;org.springframework.boot&apos; version &apos;3.4.0-RC1&apos;
+  id &apos;io.spring.dependency-management&apos; version &apos;1.1.6&apos;
+}
+
+repositories {
+  mavenCentral()
+  maven { url &apos;https://repo.spring.io/milestone&apos; }
+}
+
+ext {
+  set(&apos;springCloudVersion&apos;, &quot;2024.0.0-RC1&quot;)
+}
+
+dependencies {
+  implementation &apos;org.springframework.cloud:spring-cloud-starter-config&apos;
+  implementation &apos;org.springframework.cloud:spring-cloud-starter-netflix-eureka-client&apos;
+}
+
+dependencyManagement {
+  imports {
+    mavenBom &quot;org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}&quot;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;</content:encoded></item><item><title><![CDATA[A Bootiful Podcast: Baruch Sadogursky on Gradle, Java, developer productivity, and more]]></title><link>https://spring.io/blog/2024/11/07/a-bootiful-podcast-baruch-sadogursky</link><guid isPermaLink="true">https://spring.io/blog/2024/11/07/a-bootiful-podcast-baruch-sadogursky</guid><dc:creator><![CDATA[joshlong]]></dc:creator><pubDate>Thu, 07 Nov 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Hi, Spring fans! In this installment, I talk to legendary Gradle Developer Productivity Engineering guru (formerly of JFrog) and hero to the JVM-language community, Baruch Sadogursky, recorded live from Dr. Venkat Subramaniam&apos;s amazing conference, Dev2Next 2024!&lt;/p&gt;
+&lt;iframe title=&quot;A Bootiful Podcast&quot; allowtransparency=&quot;true&quot; height=&quot;315&quot; width=&quot;100%&quot; style=&quot;border: none; min-width: min(100%, 430px);height:315px;&quot; scrolling=&quot;no&quot; data-name=&quot;pb-iframe-player&quot; src=&quot;https://www.podbean.com/player-v2/?i=zw857-543663-pbblog-playlist&amp;share=1&amp;download=1&amp;fonts=Arial&amp;skin=1&amp;font-color=&amp;rtl=0&amp;logo_link=&amp;btn-skin=7&amp;size=315&quot; loading=&quot;lazy&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[This Week in Spring - November 5th, 2024]]></title><link>https://spring.io/blog/2024/11/05/this-week-in-spring-november-5th-2024</link><guid isPermaLink="true">https://spring.io/blog/2024/11/05/this-week-in-spring-november-5th-2024</guid><dc:creator><![CDATA[joshlong]]></dc:creator><pubDate>Tue, 05 Nov 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;this-week-in-spring---november-5th-2024&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#this-week-in-spring---november-5th-2024&quot; aria-label=&quot;this week in spring   november 5th 2024 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;This Week in Spring - November 5th, 2024&lt;/h1&gt;
+&lt;p&gt;Hi, Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! It&apos;s the 5th of November, 2024, and, um, I - an American - am desperately trying to keep calm and carry on. I did everything I can do (VOTE!), and so  it&apos;s with considerable enthusiasm that I dive into this week&apos;s (hopefully distracting) roundup!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://x.com/david_syer/status/1849839624325157198?s=12&quot;&gt;Dr. David Syer announcing the Spring GRPC project&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;a Spring Boot and GraalVM native image application, demonstrated &lt;a href=&quot;https://x.com/alina_yurenko/status/1850945616500965809?s=12&quot;&gt;by awesome Oracle GraalVM developer advocate Alina Yurenko&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/@AlexanderObregon/spring-boot-springbootapplication-annotation-explained-c1d619cc0367&quot;&gt;understanding the Spring Boot &lt;code&gt;@SpringBootApplication&lt;/code&gt; annotation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://naveen-metta.medium.com/understanding-the-lifecycle-of-a-bean-in-spring-boot-5d855d16dec0&quot;&gt;understanding the lifecycle of a Spring Boot application&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://joshlong.com/jl/blogPost/the-best-time-to-be-a-java-spring-developer.html&quot;&gt;there&apos;s never been a better time to be a Java and Spring developer!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://joshlong.com/jl/blogPost/the-best-time-to-be-a-java-spring-developer.html&quot;&gt;A New Developer&apos;s Journey, in 2024&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Super cool! Java 24 is targeting a fix to allow developers &lt;a href=&quot;https://openjdk.org/jeps/491&quot;&gt;to synchronize code on virtual threads and avoid &lt;em&gt;pinning&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item></channel></rss>

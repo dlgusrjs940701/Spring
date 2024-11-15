@@ -1,0 +1,3 @@
+select t.* from (select sub.*, rownum as rnum from (select * from
+		kboard order by indate DESC) sub) t
+		where rnum between #{startNo} and #{endNo}

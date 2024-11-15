@@ -1,0 +1,48 @@
+
+11월 07, 2024 09:15:48.90 NEW SESSION
+11월 07, 2024 09:15:48.90 [17472:33192:1107/091548.902:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+11월 07, 2024 09:15:48.97 Created TensorFlow Lite XNNPACK delegate for CPU.
+11월 07, 2024 09:16:13.98 [17472:33192:1107/091613.986:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+11월 07, 2024 09:17:12.14 [17472:33192:1107/091712.142:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+11월 07, 2024 09:18:54.47 [17472:33192:1107/091854.473:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+11월 07, 2024 09:22:15.18 [17472:33192:1107/092215.184:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+11월 07, 2024 09:29:57.03 [17472:33192:1107/092957.031:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+11월 07, 2024 12:50:43.29 [17472:4856:1107/125043.292:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch    at new He (devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:1:98356)
+11월 07, 2024 12:50:43.31     at devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:1:191793
+11월 07, 2024 12:50:43.31     at new oi (devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:1:192189)
+11월 07, 2024 12:50:43.31     at oi.instance (devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:1:192311)
+11월 07, 2024 12:50:43.31     at O.presentUI (devtools://devtools/bundled/devtools-frontend/front_end/panels/emulation/emulation.js:1:58454)
+11월 07, 2024 12:50:43.31     at #I (devtools://devtools/bundled/devtools-frontend/front_end/entrypoints/main/main.js:1:17314)
+11월 07, 2024 12:50:43.31     at #x (devtools://devtools/bundled/devtools-frontend/front_end/entrypoints/main/main.js:1:17109)", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+11월 07, 2024 13:21:44.20 [17472:33192:1107/132144.200:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+11월 07, 2024 13:43:27.07 [17472:33192:1107/134327.076:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -7
+11월 07, 2024 16:27:57.50 [17472:4856:1107/162757.501:ERROR:debug_utils.cc(14)] Hit debug scenario: 3
+
+11월 12, 2024 11:13:21.51 NEW SESSION
+11월 12, 2024 11:13:21.51 [19232:19200:1112/111321.496:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+11월 12, 2024 11:13:21.58 Created TensorFlow Lite XNNPACK delegate for CPU.
+11월 12, 2024 11:13:45.22 [19232:19200:1112/111345.227:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+11월 12, 2024 11:14:44.28 [19232:19200:1112/111444.285:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+11월 12, 2024 11:16:30.30 [19232:19200:1112/111630.304:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+11월 12, 2024 11:20:29.72 [19232:19200:1112/112029.723:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+11월 12, 2024 11:23:26.30 Created TensorFlow Lite XNNPACK delegate for CPU.
+11월 12, 2024 11:23:26.33 [16248:23736:1112/112326.338:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+11월 12, 2024 11:23:56.03 [16248:23736:1112/112356.035:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+11월 12, 2024 11:24:39.04 [16248:23736:1112/112439.045:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+11월 12, 2024 11:26:35.87 [16248:23736:1112/112635.872:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+11월 12, 2024 11:28:44.21 Created TensorFlow Lite XNNPACK delegate for CPU.
+11월 12, 2024 11:28:44.24 [30484:21100:1112/112844.244:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+11월 12, 2024 11:28:57.45 [30484:18548:1112/112857.451:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch    at new He (devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:1:98356)
+11월 12, 2024 11:28:57.45     at devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:1:191793
+11월 12, 2024 11:28:57.45     at new oi (devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:1:192189)
+11월 12, 2024 11:28:57.45     at oi.instance (devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:1:192311)
+11월 12, 2024 11:28:57.45     at O.presentUI (devtools://devtools/bundled/devtools-frontend/front_end/panels/emulation/emulation.js:1:58454)
+11월 12, 2024 11:28:57.45     at #I (devtools://devtools/bundled/devtools-frontend/front_end/entrypoints/main/main.js:1:17314)
+11월 12, 2024 11:28:57.45     at #x (devtools://devtools/bundled/devtools-frontend/front_end/entrypoints/main/main.js:1:17109)", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+11월 12, 2024 11:29:09.46 [30484:21100:1112/112909.461:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+11월 12, 2024 11:30:00.49 [30484:21100:1112/113000.490:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+11월 12, 2024 11:31:58.45 [30484:21100:1112/113158.457:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+11월 12, 2024 11:35:47.42 [30484:21100:1112/113547.422:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+11월 12, 2024 11:42:34.81 [30484:21100:1112/114234.810:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+11월 12, 2024 13:20:50.64 [30484:21100:1112/132050.641:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+11월 12, 2024 15:18:21.85 [30484:18548:1112/151821.858:ERROR:gpu_process_host.cc(982)] GPU process exited unexpectedly: exit_code=34

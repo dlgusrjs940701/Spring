@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="www.silver.dao.IF_BoardDao">
+	<!-- dao와 매핑은 namespace, id, parameterType을 맞춘다 -->
+	<!-- parameterType은 쿼리문의 ?부분의 정보 -->
+	<insert id="inin" parameterType="www.silver.vo.BoardVO">
+		insert into kboard values
+		(#{type},#{username},
+		#{pass},#{title},#{content},#{viewmember},sysdate)
+	</insert>
+	<select id="selectall" resultType="www.silver.vo.BoardVO">
+		select * from kboard
+	</select>
+	
+	<select id="selectTitle" parameterType="String" resultType="www.silver.vo.BoardVO">
+		select * from kboard where title=#{title}
+	</select>
+	<delete id="delone" parameterType="String">
+		delete from kboard where title=#{delno}
+	</delete>
+	<update id="update" parameterType="www.silver.vo.BoardVO">
+		update kboard set 
+		type=#{type}, content=#{content}, username=#{username},
+		viewmember=#{viewmember}
+		where title=#{title}
+	</update>
+
+
+
+
+
+
+
+
+
+</mapper>
+

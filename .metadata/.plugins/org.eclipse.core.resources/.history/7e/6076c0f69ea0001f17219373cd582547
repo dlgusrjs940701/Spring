@@ -1,0 +1,44 @@
+package www.silver.hom;
+
+import java.util.List;
+
+import javax.inject.Inject;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import www.silver.service.IF_BoardService;
+import www.silver.vo.BoardVO;
+
+@Controller
+public class BoardController {
+
+	@Inject
+	IF_BoardService boardservice;
+
+	@GetMapping(value = "board")
+	public String board(Model model) throws Exception {
+		// Controller > service > dao > mapper
+		// 전체 게시글을 가져오는 작업이 필요
+		List<BoardVO> list = boardservice.boardList();
+		model.addAttribute("list", list);
+		return "board/bbs";
+	}
+
+	@GetMapping(value = "bwr")
+	public String bwr() throws Exception {
+		// System.out.println("why?");
+		return "board/bbswr";
+	}
+
+	@PostMapping(value = "bwrdo")
+	public String bwrdo(@ModelAttribute BoardVO boardvo) throws Exception {
+		// System.out.println(boardvo.toString());
+		boardservice.addBoard(boardvo);
+		return "board/bbs";
+	}
+
+}
